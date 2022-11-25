@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,36 +16,36 @@
 </head>
 <body>
     <nav>
-        <div id="nav" class="container-fluid d-flex flex-row mb-0 justify-content-evenly opacity-75 fixed-top align-items-center">
+        <div id="nav" class="container-fluid d-flex flex-row mb-0 justify-content-evenly fixed-top align-items-center">
              <div class="info d-none d-lg-block">
-                 <a href="#joinus" role="button" aria-expanded="false" style="color: black; font-size: 1.5rem;">
-                    Join us.
+                 <a class="icn inverted" href="#joinus" role="button" aria-expanded="false" style="color: black; font-size: 1.5rem;">
+                    Book a call
                  </a>
              </div>
              <div class="logo d-lg-block d-xl-block">
-                <img id="logo" src="image/AMF (2).png" alt="logo"  style="height: 80px; margin-top: 5%;">
+                <img class="opacity-100" id="logo" src="image/AMF_logo.png" alt="logo"  style="height: 80px; margin-top: 5%;">
             </div>
              <div class="socials d-none d-lg-block d-flex flex-column">
                 <a href="https://www.instagram.com/amf.models/">
-                    <img src="https://img.icons8.com/ios-filled/40/null/instagram-new--v1.png"/>
+                    <img class="icn inverted" src="https://img.icons8.com/ios-filled/40/null/instagram-new--v1.png" style="margin: 0px 10px;"/>
                 </a>
                 <a href="https://t.me/amfmodels">
-                    <img src="https://img.icons8.com/ios-filled/40/null/telegram-app.png"/>
+                    <img class="icn inverted" src="https://img.icons8.com/ios-filled/40/null/telegram-app.png" style="margin: 0px 10px;"/>
                 </a>
-                <a href="mailto:ascandura0@gmail.com">
-                    <img src="https://img.icons8.com/ios-filled/40/null/secured-letter--v1.png"/>
+                <a href="#joinus">
+                    <img class="icn inverted" src="https://img.icons8.com/ios-filled/40/null/secured-letter--v1.png" style="margin: 0px 10px;"/>
                 </a>
              </div>
         </div>       
     </nav>
 
-    <div class="view" style="height:60vh;background-image: url('image/pexels-asad-photo-maldives-3155674.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; position: relative;">
+    <div class="view d-flex align-items-center" style="height:60vh; background-image: url('image/pexels-asad-photo-maldives-3155674.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; position: relative;">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s" style="font-family: Luxurious Roman; padding-top: 18%;">
-              <h1 class="h1-responsive font-weight-bold mt-sm-5" style="font-size: 2rem;">Get your modeling career started.</h1>
+            <div class="col-md-6 white-text text-center" data-wow-delay="0.3s" style="font-family: Luxurious Roman;">
+              <h1 class="h1-responsive font-weight-bold" style="font-size: 1.6rem;">Get your modeling career started.</h1>
               <hr class="hr-light">
-              <h6 class="mb-4" style="font-size: 1.5rem;"><strong>With our Onlyfans agency, we can make you over
+              <h6 class="mb-4" style="font-size: 1.1rem;"><strong>With our Onlyfans agency, we can make you over
                 <span style="color: rgba(255, 0, 0, 0.627);"> $10.000 </span>
                 per month while keeping your anonymity.</h6></strong>
             </div>
@@ -176,7 +176,7 @@
     <br><br>
     <div class="d-flex flex-wrap justify-content-around" style="width: 100%;">
         <div class="form-group">
-            <form action="" method="post" style="width: 100%;">
+            <form name=”form1″> 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">
                         <img src="https://img.icons8.com/ios-filled/20/null/instagram-new--v1.png"/>
@@ -215,17 +215,17 @@
                     id="name"
                     type="text"
                     class="form-control"
-                    placeholder="Username"
-                    aria-label="Username"
+                    placeholder="Your name"
+                    aria-label="Your name"
                     />
                 </div>
-
+                
                 <div class="input-group mb-3">
                     <textarea name="msg" id="msg" class="form-control" aria-label="With textarea"></textarea>
                 </div>
                 
                 <div class="input-group justify-content-center submit-btn">
-                    <button>submit</button>
+                    <button id="submitBtn" type="submit">submit</button>
                 </div>
 
             </form>
@@ -240,30 +240,6 @@
         </div>
         <br>
     </footer>
-
-
-<script>
-    window.onscroll = e => {
-        let element = document.getElementById("nav");
-        let logo = document.getElementById("logo");
-
-        if (window.scrollY > 10 && window.scrollY <=100){
-            element.classList.add("opacity-100", "bg-light");
-            element.classList.remove("opacity-75");
-            logo.style.animation = "small-logo 0.5s";
-            logo.style.height = "50px";
-            return;
-        }
-
-        else if(window.scrollY <= 10 && window.scrollY > 1 && logo.height != 80) {
-            element.classList.add("opacity-75");
-            element.classList.remove("opacity-100", "bg-light");
-            logo.style.animation = "big-logo 0.5s";
-            logo.style.height = "80px";
-            return;
-        }
-    }
-</script>
-
+<script src="script/script.js"></script>
 </body>
 </html>
