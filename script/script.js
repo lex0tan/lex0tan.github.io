@@ -28,31 +28,33 @@ window.onscroll = e => {
 
 
 
-// let btn = document.getElementById("submitBtn");
-// btn.addEventListener("click", event => {
-//     event.preventDefault();
-//     let name = document.getElementById("name").value;
-//     let email = document.getElementById("email").value;
-//     let message = document.getElementById("msg").value;
-//     let data = {
-//         name,
-//         email,
-//         message
-//     };
-//     fetch("127.0.0.1:5000", {
-//         method: "POST",
-//         body: JSON.stringify(data),
-//         headers: {
-//             "Content-Type": "application/json"
-//         }
-//     }).then(res => {
-//         console.log(res);
-//         if (res.status == 200) {
-//             alert("Message sent successfully!");
-//         }
-//     }).catch(err => {
-//         console.log(err);
-//     });
-// });
+let btn = document.getElementById("submitBtn");
+btn.addEventListener("click", event => {
+    event.preventDefault();
+    let instagram = document.getElementById("instagram").value;
+    let email = document.getElementById("email").value;
+    let name = document.getElementById("name").value;
+    let message = document.getElementById("msg").value;
+    let data = {
+        instagram,
+        email,
+        name,
+        message
+    };
+    fetch("https://blame.pythonanywhere.com", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(res => {
+        console.log(res);
+        if (res.status == 200) {
+            alert("Message sent successfully!");
+        }
+    }).catch(err => {
+        console.log(err);
+    });
+});
     
 
