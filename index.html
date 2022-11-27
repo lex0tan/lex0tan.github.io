@@ -16,7 +16,6 @@
 </head>
 <body>
     <nav>
-        <div>masuca</div>
         <div id="nav" class="container-fluid d-flex flex-row mb-0 justify-content-evenly fixed-top align-items-center">
              <div class="info d-none d-lg-block">
                  <a class="icn inverted" href="#joinus" role="button" aria-expanded="false" style="color: black; font-size: 1.5rem;">
@@ -121,7 +120,7 @@
                     
                     <div class="card-a">
                         <div class="card-logo">
-                            <img src="https://img.icons8.com/ios/70/null/woman-hips.png"/><hr>
+                            <img src="https://img.icons8.com/ios/70/null/woman-hips.png"/>                            <hr>
                         </div>
                         <h5><span>Content creation</span></h5>
                     </div>
@@ -220,24 +219,26 @@
                     aria-label="Your name"
                     />
                 </div>
-                
+
                 <div class="input-group mb-3">
                     <textarea name="msg" id="msg" class="form-control" aria-label="With textarea"></textarea>
                 </div>
-                
-                <div class="input-group justify-content-center submit-btn">
-                    <button id="submitBtn" type="submit">submit</button>
-                </div>
-
             </form>
+                            
         </div>
+        <div class="input-group justify-content-center submit-btn">
+            <button class="subm-button" id="submitBtn" type="button" disabled>
+                    submit
+            </button>
+        </div>
+        <div id="errormsg" style="color: white;"></div>
     </div>
     <br><br>
-    <footer class="bg-dark">
+    <footer class="bg-dark" style="color: black">
         <br>
         <div class="container-fluid d-flex flex-column align-items-center">
-            <div style="color: black;">Copyright 2022 © AMF Agency</div>
-            <div style="color: black;">All icons used are courtesy of Flaticon</div>
+            <div style="color: rgb(255, 255, 255);">Copyright 2022 © AMF Agency</div>
+            <div style="color: rgb(255, 255, 255);">All icons used are courtesy of <a href="https://icons8.com/">icons8</a> </div>
         </div>
         <br>
     </footer>
